@@ -126,7 +126,6 @@ public class LinkedList {
         ListNode p = head;
         if (p!= null){
             head = p.getNext();
-//            p.setNext(null);
             length--;
         }
         else {
