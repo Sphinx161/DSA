@@ -58,8 +58,6 @@ public class LinkedList<T extends Comparable<T>> implements ListNodeIntface<T> {
             p.setNext(q);
 
             }
-
-
         }
 
 
@@ -72,7 +70,6 @@ public class LinkedList<T extends Comparable<T>> implements ListNodeIntface<T> {
         System.out.println("[" + head + " removed]");
         head = temp.getNext();
         temp.setNext(null);
-
     }
 
     @Override
