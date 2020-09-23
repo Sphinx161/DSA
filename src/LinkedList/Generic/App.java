@@ -1,5 +1,8 @@
 package LinkedList.Generic;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class App{
     public static void main(String[] args) {
         LinkedList<Integer> l = new LinkedList<Integer>();
@@ -21,12 +24,19 @@ public class App{
             l.insertATEnd(i+10);
         }
         l.traverseLength();
-        l.removeAtATPosition(9);
+        l.removeAtATPosition(12);
         l.traverseLength();
-//        l.removeAtATPosition(2);
-//        l.removeAtATPosition(3);
+        l.removeAtATPosition(2);
+        l.removeAtATPosition(3);
 
-//        l.traverseLength();
+        l.traverseLength();
+
+        
+
+
+
+
+
 
 
     }
