@@ -1,6 +1,6 @@
 package DoublyLinkedList.Test;
 
-public class DLL {
+public class DLL implements DLLIntface {
     private Node head;
     private Node tail;
     private int length=0;
@@ -70,11 +70,6 @@ public class DLL {
                         temp = temp.getNext();
                     }
                     x = temp;
-//                    newNode.setNext(temp);
-//                    temp.getPrev().setNext(newNode);
-//                    newNode.setPrev(temp.getPrev());
-//                    temp.setPrev(newNode);
-//                    length++;
                 }
                 else {
                     position = (length-1) - position;
@@ -82,11 +77,6 @@ public class DLL {
                         back = back.getPrev();
                     }
                     x = back;
-//                    newNode.setNext(back);
-//                    back.getPrev().setNext(newNode);
-//                    newNode.setPrev(back.getPrev());
-//                    back.setPrev(newNode);
-//                    length++;
                 }
                 newNode.setNext(x);
                 x.getPrev().setNext(newNode);
@@ -96,17 +86,6 @@ public class DLL {
 
 
             }
-//            else {
-//                for (int i=0; i<position; i++){
-//                    temp = temp.getNext();
-//                }
-//                newNode.setNext(temp);
-//                temp.getPrev().setNext(newNode);
-//                newNode.setPrev(temp.getPrev());
-//                temp.setPrev(newNode);
-//                length++;
-//            }
-
         }
     }
 
@@ -115,23 +94,59 @@ public class DLL {
         if (temp == null){
             System.out.println("[-] List empty!");
         }
-        head = temp.getNext();
-        head.setPrev(null);
-        temp.setNext(null);
-        length--;
+        else if (length == 1){
+            head = tail = null;
+            length--;
+        }else {
+            head = temp.getNext();
+            head.setPrev(null);
+            temp = null;
+            length--;
+        }
+
     }
 
     public void removeAtEnd(){
         if (head == null){
             System.out.println("[-] List empty!");
+        }else {
+            if (length == 1) {
+                head = tail = null;
+            }else {
+                tail = tail.getPrev();
+                tail.setNext(null);
+            }
+            length--;
         }
-        Node temp = tail;
-        tail = temp.getPrev();
-        tail.setNext(null);
-        temp.setPrev(null);
-        length--;
+
     }
 
+    public void removeAtPosition(int position){
+        if (position<0 || position >= length){
+            System.out.println("Invalid position or position = length");
+        }
+        else if (head == null){
+            System.out.println("List empty");
+        }else {
+             if (position == 0){
+                removeAtBegin();
+            }
+            else if (position == length-1){
+                removeAtEnd();
+            }
+            else {
+                Node temp = head;
+                for (int i=0; i<position; i++){
+                   temp = temp.getNext();
+                }
+                temp.getPrev().setNext(temp.getNext());
+                temp.getNext().setPrev(temp.getPrev());
+                temp = null;
+                 length--;
+            }
+
+        }
+    }
 
     public void traverseLength(){
         Node temp = head;
@@ -152,7 +167,4 @@ public class DLL {
         }
         System.out.println("");
     }
-
-
-
 }

@@ -67,9 +67,14 @@ public class LinkedList<T extends Comparable<T>> implements ListNodeIntface<T> {
         if (temp == null){
             System.out.println("List empty!");
         }
-        System.out.println("[" + head + " removed]");
-        head = temp.getNext();
-        temp.setNext(null);
+        else if (length == 1){
+            head = null;
+        }else {
+            System.out.println("[" + head + " removed]");
+            head = temp.getNext();
+            temp.setNext(null);
+        }
+
     }
 
     @Override
