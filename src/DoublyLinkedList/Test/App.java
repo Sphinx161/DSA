@@ -8,13 +8,13 @@ public class App {
 //        x.traverseLength();
 
 
-//        x.insertAtBegin(70);
-//        x.insertAtBegin(60);
-//        x.insertAtBegin(50);
-//        x.insertAtBegin(40);
-//        x.insertAtBegin(30);
-//        x.insertAtBegin(20);
-//        x.insertAtBegin(10);
+        x.insertAtBegin(70);
+        x.insertAtBegin(60);
+        x.insertAtBegin(50);
+        x.insertAtBegin(40);
+        x.insertAtBegin(30);
+        x.insertAtBegin(20);
+        x.insertAtBegin(10);
         x.traverseLength();
 //        x.traverseTail();
 //        System.out.println("Head: "  + x.getHead().getData());
@@ -52,9 +52,9 @@ public class App {
 //        System.out.println("Tail: "  + x.getTail().getData());
 //        x.traverseTail();
 //        x.removeAtEnd();
-        x.insertAtPosition(0,0);
-        System.out.println("Head: "  + x.getHead().getData());
-        System.out.println("Tail: "  + x.getTail().getData());
+       x.removeAtPosition(3);
+//        System.out.println("Head: "  + x.getHead().getData());
+//        System.out.println("Tail: "  + x.getTail().getData());
         x.traverseLength();
         x.traverseTail();
 

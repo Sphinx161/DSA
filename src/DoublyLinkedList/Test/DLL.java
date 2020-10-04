@@ -135,12 +135,26 @@ public class DLL implements DLLIntface {
                 removeAtEnd();
             }
             else {
-                Node temp = head;
-                for (int i=0; i<position; i++){
-                   temp = temp.getNext();
-                }
-                temp.getPrev().setNext(temp.getNext());
-                temp.getNext().setPrev(temp.getPrev());
+                 Node x = null;
+                 Node temp = head;
+                 Node back = tail;
+                 int len = length/2;
+                 if (position <= len){
+                     for (int i=0;i<position;i++){
+                         temp = temp.getNext();
+                     }
+                     x = temp;
+                 }
+                 else {
+                     position = (length-1) - position;
+                     for (int i=0; i<position;i++){
+                         back = back.getPrev();
+                     }
+                     x = back;
+                 }
+
+                x.getPrev().setNext(x.getNext());
+                x.getNext().setPrev(x.getPrev());
                 temp = null;
                  length--;
             }
