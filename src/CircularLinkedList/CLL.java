@@ -6,7 +6,11 @@ public class CLL implements CLLIntface {
 
     @Override
     public void getLength(){
-        System.out.println("Length= " + length);
+       return length;
+    }
+    
+    public void getHead(){
+        return head;
     }
 
     @Override
@@ -109,8 +113,5 @@ public class CLL implements CLLIntface {
             }
             System.out.println(" ");
         }
-
-
-
     }
 }
