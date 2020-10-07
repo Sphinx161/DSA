@@ -4,6 +4,7 @@ public class CLL implements CLLIntface {
     private Node head;
     private int length=0;
 
+    @Override
     public void getLength(){
         System.out.println("Length= " + length);
     }
