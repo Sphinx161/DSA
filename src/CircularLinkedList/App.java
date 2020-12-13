@@ -13,6 +13,7 @@ public class App {
         x.getLength();
         x.removeEnd();
         x.traverseLength();
+        System.out.println();
 
     }
 
