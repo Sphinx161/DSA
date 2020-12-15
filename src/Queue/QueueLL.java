@@ -29,8 +29,10 @@ public class QueueLL<T extends Comparable<T>> implements NodeInterface<T>  {
 
     @Override
     public void peek() {
-
-
+        if (top == null)
+            System.out.println("Empty!");
+        else
+            System.out.println("Top: " + top.getData());
     }
 
     @Override
