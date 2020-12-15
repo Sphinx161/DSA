@@ -9,8 +9,8 @@ public class QueueLL<T extends Comparable<T>> implements NodeInterface<T>  {
     public void push(T data) {
         Node<T> newNode = new Node<>(data);
         if (top == null){
-            top = newNode;
-            rear = newNode;
+            top = rear = newNode;
+             newNode;
         }else{
             rear.setNext(newNode);
             rear = rear.getNext();
