@@ -22,8 +22,12 @@ public class QueueLL<T extends Comparable<T>> implements NodeInterface<T>  {
     public void pop() {
         if (top == null)
             System.out.println("Empty!");
-        else
+        else{
             top = top.getNext();
+            if(top == null)
+                rear = null;
+        }
+        
         length--;
     }
 
