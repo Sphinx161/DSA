@@ -24,8 +24,6 @@ public class QueueLL<T extends Comparable<T>> implements NodeInterface<T>  {
             System.out.println("Empty!");
         else
             top = top.getNext();
-            if(top == null)
-                rear = null;
         length--;
     }
 
@@ -63,23 +61,20 @@ public class QueueLL<T extends Comparable<T>> implements NodeInterface<T>  {
         queueLL.push(2);
         queueLL.push(3);
         queueLL.pop();
-        queueLL.pop();
-        queueLL.pop();
         queueLL.length();
         queueLL.push(4);
-        queueLL.pop();
         queueLL.show();
         queueLL.length();
 
 
-//        QueueLL<String> queue = new QueueLL<>();
-//        queue.push("a");
-//        queue.push("b");
-//        queue.push("c");
-//        queue.show();
-//        queue.pop();
-//        queue.length();
-//        queue.show();
+        QueueLL<String> queue = new QueueLL<>();
+        queue.push("a");
+        queue.push("b");
+        queue.push("c");
+        queue.show();
+        queue.pop();
+        queue.length();
+        queue.show();
 
 
     }
