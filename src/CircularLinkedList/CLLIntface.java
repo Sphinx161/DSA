@@ -1,7 +1,7 @@
 package CircularLinkedList;
 
 public interface CLLIntface {
-    public void getLength();
+    public int getLength();
     public void insertEnd(int data);
     public void removeEnd();
     public void removeBegin();

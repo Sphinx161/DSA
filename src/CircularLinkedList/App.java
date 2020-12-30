@@ -10,7 +10,7 @@ public class App {
         x.traverseLength();
         x.insertEnd(90);
         x.removeBegin();
-        x.getLength();
+//        x.getLength();
         x.removeEnd();
         x.traverseLength();
         System.out.println();
